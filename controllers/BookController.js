@@ -25,6 +25,7 @@ class BookController {
 
     async update(req, res) {
         const data = await book.findByIdAndUpdate(req.params.id, req.body);
+        data.updatedAt = Date.now();
         return res.json(data);
     }
 }

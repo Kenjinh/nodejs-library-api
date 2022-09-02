@@ -7,9 +7,7 @@ router.get("/", Book.index);
 
 router.post("/register", Book.store);
 
-router.put("/edit/:id", function(req, res) {
-    res.send("You hit the put route");
-});
+router.put("/edit/:id", Book.update);
 
 router.delete("/delete/:id", Book.delete);
 
